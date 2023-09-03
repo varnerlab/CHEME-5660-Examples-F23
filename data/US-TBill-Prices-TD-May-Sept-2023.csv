@@ -1,4 +1,4 @@
-CUSIP,Security Type,Security Term,Auction Date,Issue Date,Maturity Date,Price,Rate
+CUSIP,Security Type,Security Term,Auction Date,Issue Date,Maturity Date,Price,Investment Rate
 912797GV3,Bill,4-Week,08/31/2023,09/05/2023,10/03/2023,99.589333,0.05390
 912797HD2,Bill,8-Week,08/31/2023,09/05/2023,10/31/2023,99.177111,0.05423
 912797HX8,Bill,17-Week,08/30/2023,09/05/2023,01/02/2024,98.238139,0.05516
