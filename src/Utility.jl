@@ -23,6 +23,8 @@ function securityterm(duration::String)::Float64
     unit_of_time = security_term_components[2];
     if (unit_of_time == "Week")
         numerator *= number_of_days_per_week;    
+    elseif (unit_of_time == "Year")
+        numerator *= number_of_days_per_year;
     end   
     
     # calculate -
