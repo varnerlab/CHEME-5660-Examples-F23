@@ -11,3 +11,7 @@ end
 function MyTreasuryNotesAndBondsDataSet()::DataFrame
     return _loadcsvfile(joinpath(_PATH_TO_DATA, "US-TNotesBonds-Prices-TD-May-Sept-2023.csv"));
 end
+
+function MyDailyTreasuryYieldCurveDataSet()::DataFrame
+    return _loadcsvfile(joinpath(_PATH_TO_DATA, "daily-treasury-rates-2023.csv"));
+end
