@@ -12,6 +12,15 @@ function MyTreasuryNotesAndBondsDataSet()::DataFrame
     return _loadcsvfile(joinpath(_PATH_TO_DATA, "US-TNotesBonds-Prices-TD-May-Sept-2023.csv"));
 end
 
-function MyDailyTreasuryYieldCurveDataSet()::DataFrame
+function MyDailyTreasuryYieldCurveDataSet(;year::String = "2023")::DataFrame
+
+
+    if (year == "2021")
+        return _loadcsvfile(joinpath(_PATH_TO_DATA, "daily-treasury-rates-2021.csv"));
+    elseif (year == "2022")
+        return _loadcsvfile(joinpath(_PATH_TO_DATA, "daily-treasury-rates-2022.csv"));
+    end
+
+    # default to 2023 -
     return _loadcsvfile(joinpath(_PATH_TO_DATA, "daily-treasury-rates-2023.csv"));
 end
