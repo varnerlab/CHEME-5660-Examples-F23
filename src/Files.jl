@@ -3,6 +3,10 @@ function _loadcsvfile(path::String)::DataFrame
     return CSV.read(path, DataFrame);
 end
 
+function _jld2(path::String)::Dict{String,Any}
+    return load(path);
+end
+
 # Load harded coded specific files -
 function MyTreasuryBillDataSet()::DataFrame
     return _loadcsvfile(joinpath(_PATH_TO_DATA, "US-TBill-Prices-TD-May-Sept-2023.csv"));
@@ -24,3 +28,6 @@ function MyDailyTreasuryYieldCurveDataSet(;year::String = "2023")::DataFrame
     # default to 2023 -
     return _loadcsvfile(joinpath(_PATH_TO_DATA, "daily-treasury-rates-2023.csv"));
 end
+
+MyPortfolioDataSet() = _jld2(joinpath(_PATH_TO_DATA, "OHLC-Daily-SP500-5-years-TD-1256.jld2"));
+MyFirmMappingDataSet() = _loadcsvfile(joinpath(_PATH_TO_DATA, "SP500-Firm-Mapping-06-22-23.csv"));
