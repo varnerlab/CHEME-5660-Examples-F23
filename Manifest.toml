@@ -23,9 +23,9 @@ weakdeps = ["ChainRulesCore", "Test"]
 
 [[deps.Adapt]]
 deps = ["LinearAlgebra", "Requires"]
-git-tree-sha1 = "68c4c187a232e7abe00ac29e3b03e09af9d77317"
+git-tree-sha1 = "02f731463748db57cc2ebfbd9fbc9ce8280d3433"
 uuid = "79e6a3ab-5dfb-504d-930d-738a2a938a0e"
-version = "3.7.0"
+version = "3.7.1"
 weakdeps = ["StaticArrays"]
 
     [deps.Adapt.extensions]
@@ -49,9 +49,9 @@ version = "3.5.1+1"
 
 [[deps.ArrayInterface]]
 deps = ["Adapt", "LinearAlgebra", "Requires", "SparseArrays", "SuiteSparse"]
-git-tree-sha1 = "f83ec24f76d4c8f525099b2ac475fc098138ec31"
+git-tree-sha1 = "eba0af42241f0cb648806604222bab1e064edb67"
 uuid = "4fba245c-0d91-5ea0-9b3e-6abc04ee57a9"
-version = "7.4.11"
+version = "7.5.0"
 
     [deps.ArrayInterface.extensions]
     ArrayInterfaceBandedMatricesExt = "BandedMatrices"
@@ -579,9 +579,9 @@ version = "2.1.91+0"
 
 [[deps.JuMP]]
 deps = ["LinearAlgebra", "MacroTools", "MathOptInterface", "MutableArithmetics", "OrderedCollections", "Printf", "SnoopPrecompile", "SparseArrays"]
-git-tree-sha1 = "3700a700bc80856fe673b355123ae4574f2d5dfe"
+git-tree-sha1 = "25b2fcda4d455b6f93ac753730d741340ba4a4fe"
 uuid = "4076af6c-e467-56ae-b986-b466b2749572"
-version = "1.15.1"
+version = "1.16.0"
 
     [deps.JuMP.extensions]
     JuMPDimensionalDataExt = "DimensionalData"
@@ -783,9 +783,9 @@ uuid = "d6f4376e-aef5-505a-96c1-9c027394607a"
 
 [[deps.MathOptInterface]]
 deps = ["BenchmarkTools", "CodecBzip2", "CodecZlib", "DataStructures", "ForwardDiff", "JSON", "LinearAlgebra", "MutableArithmetics", "NaNMath", "OrderedCollections", "PrecompileTools", "Printf", "SparseArrays", "SpecialFunctions", "Test", "Unicode"]
-git-tree-sha1 = "5c9f1e635e8d491297e596b56fec1c95eafb95a3"
+git-tree-sha1 = "13b3d40084d04e609e0509730f05215fb2a2fba4"
 uuid = "b8f27783-ece8-5eb3-8dc8-9495eed66fee"
-version = "1.20.1"
+version = "1.21.0"
 
 [[deps.MbedTLS]]
 deps = ["Dates", "MbedTLS_jll", "MozillaCACerts_jll", "Random", "Sockets"]
@@ -1320,7 +1320,7 @@ version = "0.2.0"
 
 [[deps.VLQuantitativeFinancePackage]]
 deps = ["CSV", "DataFrames", "Distributions", "JLD2", "JuMP", "LinearAlgebra", "LsqFit", "MadNLP", "Statistics"]
-git-tree-sha1 = "20f48f896886bc29bbba2c9c2931bf520f21a354"
+git-tree-sha1 = "4b99c451bb569814f57229dbcea44e6d93f5ccfa"
 repo-rev = "main"
 repo-url = "https://github.com/varnerlab/VLQuantitativeFinancePackage.jl.git"
 uuid = "4119e0bf-20d0-4785-913e-5ebdb0caa218"
