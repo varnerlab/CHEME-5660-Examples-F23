@@ -203,26 +203,40 @@ function preference(beta::Array{Beta,1}, tickers::Array{String,1}; N::Int64 = 10
     pref_array = Array{Float64,1}(undef, K)
 
     # main sampling loop -
-    for i ∈ 1:N # for each sample
-        for k ∈ 1:K # for each action
+    # for i ∈ 1:N # for each sample
+    #     for k ∈ 1:K # for each action
             
-            # grab -
-            d = beta[k];
+    #         # grab -
+    #         d = beta[k];
             
-            # generate a sample for this action -
-            θ̂_vector[k] = rand(d);
-        end
+    #         # generate a sample for this action -
+    #         θ̂_vector[k] = rand(d);
+    #     end
 
-        # ok: let's choose an action -
-        tmp_array[i] = argmax(θ̂_vector);
+    #     # ok: let's choose an action -
+    #     tmp_array[i] = argmax(θ̂_vector);
+    # end
+
+    # Let's compute the mean of each beta distribution -
+    for k ∈ 1:K # for each action
+        
+        # grab -
+        d = beta[k];
+        α,β = params(d);
+        
+        # generate a sample for this action -
+        θ̂_vector[k] = (α)/(α+β);
     end
 
-    # how many of each do we have?
-    for k ∈ 1:K
-        idx = findall(x->x==k, tmp_array);
-        pref_array[k] = length(idx)/N;
-    end
+    # ok: let's choose an action -
+
+
+    # # how many of each do we have?
+    # for k ∈ 1:K
+    #     idx = findall(x->x==k, tmp_array);
+    #     pref_array[k] = length(idx)/N;
+    # end
 
     # return -
-    return pref_array
+    return tiedrank(θ̂_vector, rev = true);
 end
