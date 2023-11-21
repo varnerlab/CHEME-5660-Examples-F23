@@ -16,6 +16,7 @@ using CSV
 using Dates
 using LinearAlgebra
 using Statistics
+using StatsBase
 using Plots
 using Colors
 using StatsPlots
