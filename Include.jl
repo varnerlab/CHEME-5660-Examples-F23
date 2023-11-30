@@ -25,6 +25,9 @@ using FileIO
 using Distributions
 using LsqFit
 using MathOptInterface
+using DataStructures
+using PrettyTables
+using Flux
 
 # load my codes -
 include(joinpath(_PATH_TO_SRC, "Files.jl"));
