@@ -28,6 +28,7 @@ using MathOptInterface
 using DataStructures
 using PrettyTables
 using Flux
+using OneHotArrays
 
 # load my codes -
 include(joinpath(_PATH_TO_SRC, "Files.jl"));
